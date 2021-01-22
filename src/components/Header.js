@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-const headingStyles = {
-    color: 'red', backgroundColor: 'skyblue'
-
-}
+import '../index.css'
+//const headingStyles = {
+//    color: 'red', backgroundColor: 'skyblue'
+//
+//}
 
 export const Header = ({ title }) => {
     return (
         <header>
-            <h1 style={headingStyles}>Task Tracker</h1>
+            <h1>Task Tracker</h1>
             <p> {title}</p>
         </header>
     )
