@@ -1,19 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../index.css'
+import Button from './Button'
+
 //const headingStyles = {
 //    color: 'red', backgroundColor: 'skyblue'
 //
 //}
 
 export const Header = ({ title }) => {
+
+    const onClick = () => {
+        console.log('click');
+    }
+
     return (
-        <header>
+        <header className="header">
             <h1>Task Tracker</h1>
-            <p> {title}</p>
+            <Button text="Add" onClick={onClick} />
+
         </header>
     )
 }
+
+
 
 Header.defaultProps = {
     title: "Default Props"
