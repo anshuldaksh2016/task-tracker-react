@@ -18,18 +18,30 @@ function App() {
         day: "Feb 9th 9:00 AM",
         remainder: true,
       }, {
-        id: 1,
+        id: 3,
         text: 'Grocery shopping',
-        day: "Feb 15th",
+        day: "Feb 15th 9:50AM ",
         remainder: true,
       },
     ]
   );
 
+  // delet task
+  const deleteTask = (id) => {
+    //console.log(id + "Deleted !!");
+    setTasks(tasks.filter((task) => task.id !== id));
+    // show only where the task.id is not equal to the id .
+  }
+
   return (
     <div className="container">
       <Header />
-      <Tasks tasks={tasks} />
+      {
+        tasks.length > 0 ?
+          <Tasks tasks={tasks} onDelete={deleteTask} /> :
+          'No tasks Add some '
+      }
+
     </div>
   );
 }
